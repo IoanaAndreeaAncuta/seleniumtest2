@@ -11,8 +11,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.PageFactory;
 
-import java.util.List;
-
 import static org.hamcrest.CoreMatchers.containsString;
 import static org.hamcrest.MatcherAssert.assertThat;
 
@@ -54,7 +52,6 @@ public class SimpleSearchTest {
         driver.get("https://fasttrackit.org/selenium-test/");
 
         driver.findElement(By.id("search")).sendKeys("vase" + Keys.ENTER);
-
 
         String oldPrice = driver.findElement(By.xpath("//p[@class='old-price']//span[@class='price']")).getText();
         String specialPrice = driver.findElement(By.xpath("//p[@class='special-price']//span[@class='price']")).getText();
